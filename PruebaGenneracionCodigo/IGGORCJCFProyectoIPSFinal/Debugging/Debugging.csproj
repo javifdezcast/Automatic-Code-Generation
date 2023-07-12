@@ -1,0 +1,159 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="16.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.10318</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7D44060-A479-41A0-BB4E-92041D19E6C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Debugging</RootNamespace>
+    <AssemblyName>Debugging</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dsl\GeneratedCode\IGGORCJCFProyectoIPSSchema.xsd">
+      <Link>IGGORCJCFProyectoIPSSchema.xsd</Link>
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="IGGORCJCFProyectoIPS1.IGGORCJCFProyectoIPS" />
+    <None Include="IGGORCJCFProyectoIPS1.IGGORCJCFProyectoIPS.diagram">
+      <DependentUpon>IGGORCJCFProyectoIPS1.IGGORCJCFProyectoIPS</DependentUpon>
+    </None>
+    <None Include="IGGORCJCFProyectoIPS2.IGGORCJCFProyectoIPS" />
+    <None Include="IGGORCJCFProyectoIPS2.IGGORCJCFProyectoIPS.diagram">
+      <DependentUpon>IGGORCJCFProyectoIPS2.IGGORCJCFProyectoIPS</DependentUpon>
+    </None>
+    <None Include="IGGORCJCFProyectoIPSReport.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IGGORCJCFProyectoIPSReport.txt</LastGenOutput>
+    </None>
+    <None Include="IGGORCJCFProyectoIPSReportVB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IGGORCJCFProyectoIPSReportVB.txt</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aplicacion.py">
+      <DependentUpon>PrototoolPython.tt</DependentUpon>
+    </Content>
+    <Content Include="Boton.java">
+      <DependentUpon>PrototoolJava.tt</DependentUpon>
+    </Content>
+    <Content Include="Contacto.html">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="IGGORCJCFProyectoIPSReport.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IGGORCJCFProyectoIPSReport.tt</DependentUpon>
+    </Content>
+    <Content Include="IGGORCJCFProyectoIPSReportVB.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IGGORCJCFProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="ItemMenu.java">
+      <DependentUpon>PrototoolJava.tt</DependentUpon>
+    </Content>
+    <Content Include="Ivan.html">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Javier.html">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Nosotros.html">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Oscar.html">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Principal.html">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="PrototoolHTML.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PrototoolHTML1.html</LastGenOutput>
+    </Content>
+    <Content Include="PrototoolHTML1.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="PrototoolJava.java">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrototoolJava.tt</DependentUpon>
+    </Content>
+    <Content Include="PrototoolJava.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PrototoolJava.java</LastGenOutput>
+    </Content>
+    <Content Include="PrototoolPython.py">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrototoolPython.tt</DependentUpon>
+    </Content>
+    <Content Include="PrototoolPython.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PrototoolPython.py</LastGenOutput>
+    </Content>
+    <Content Include="style.css">
+      <DependentUpon>PrototoolHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="VentanaPrincipal.java">
+      <DependentUpon>PrototoolJava.tt</DependentUpon>
+    </Content>
+    <Content Include="VentanaPrincipal.py">
+      <DependentUpon>PrototoolPython.tt</DependentUpon>
+    </Content>
+    <Content Include="VentanaS1.py">
+      <DependentUpon>PrototoolPython.tt</DependentUpon>
+    </Content>
+    <Content Include="VentanaS2.py">
+      <DependentUpon>PrototoolPython.tt</DependentUpon>
+    </Content>
+    <Content Include="VentanaS3.py">
+      <DependentUpon>PrototoolPython.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

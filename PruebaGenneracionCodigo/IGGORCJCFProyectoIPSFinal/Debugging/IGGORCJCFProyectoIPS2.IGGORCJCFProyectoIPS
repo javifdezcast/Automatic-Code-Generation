@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c5cab2b5-b8f2-43cb-8b49-f18aa674d8bd" xmlns="http://schemas.microsoft.com/dsltools/IGGORCJCFProyectoIPS">
+  <ventanaPrincipal>
+    <tapizVentanasHasVentanaPrincipal Id="83456fb4-3460-4668-b23e-e1d0bb9f9d7f">
+      <ventanaPrincipal Id="f0898869-5fea-4046-91a7-81e73b3ea086" nombre="Principal" alto="720" ancho="1080">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="503a8011-8436-4ee2-a9cd-4729147651c4">
+            <boton Id="2d51fc10-1ead-4ead-94f6-400df0725fee" titulo="Contacto">
+              <ventana>
+                <itemReferencesVentana Id="0acf8875-8d1e-4665-9c03-b9ca6f432182">
+                  <ventanaSecundariaMoniker Id="cb87145f-ac5d-4ac0-9887-5f75b983c18a" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="662e9324-28ed-43fd-b19b-f10c1c8ad0c8">
+            <boton Id="c31f8a9a-3f25-4ff7-b701-e8459a73d733" titulo="Nosotros">
+              <ventana>
+                <itemReferencesVentana Id="16e6013f-cb41-4994-a213-c2083bfdae76">
+                  <ventanaSecundariaMoniker Id="41c1f420-9d47-468b-81a8-163866495336" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="e2a75fd3-ebab-42fc-8bf8-0f73571fb13e">
+            <boton Id="bb3108e2-ab94-4655-a2d6-dbd8634565d2" titulo="Cerrar">
+              <estadoFinal>
+                <itemReferencesEstadoFinal Id="2a27f25c-c3cc-4443-889d-2309dc17d0e8">
+                  <estadoFinalMoniker Id="13f7699b-9dcd-4e56-ba23-7a1854a7378c" />
+                </itemReferencesEstadoFinal>
+              </estadoFinal>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <entradaDeDatos>
+          <ventanaHasEntradaDeDatos Id="08d53eab-f61a-415e-a6e2-78702a7d6979">
+            <areaDeTexto Id="43584ca0-5df6-4911-bc65-8272b60a3f4a" titulo="Bienvenida" texto="Bienvenidos a nuestra herramienta PROTOTOOL realizada para facilitar la creación de páginas web y aplicaciones Java." disposicion="UnaColumna" />
+          </ventanaHasEntradaDeDatos>
+        </entradaDeDatos>
+        <componente>
+          <ventanaHasComponente Id="7135e55d-9de4-419e-80fd-8ad496c6dce8">
+            <componente Id="8b55ce5f-66db-4b80-8824-0bd6e075f0c0" nombre="CompBotones">
+              <item>
+                <componenteReferencesItem Id="bd2bb929-2f4a-4e5a-a325-3a3bef25a6bd">
+                  <botonMoniker Id="c31f8a9a-3f25-4ff7-b701-e8459a73d733" />
+                </componenteReferencesItem>
+                <componenteReferencesItem Id="44d3bbf5-61c5-4b9b-9bcb-bd2e4efbb14d">
+                  <botonMoniker Id="bb3108e2-ab94-4655-a2d6-dbd8634565d2" />
+                </componenteReferencesItem>
+                <componenteReferencesItem Id="37655a16-0979-4a4e-83f6-6dbc37d5c8b1">
+                  <botonMoniker Id="2d51fc10-1ead-4ead-94f6-400df0725fee" />
+                </componenteReferencesItem>
+              </item>
+            </componente>
+          </ventanaHasComponente>
+        </componente>
+      </ventanaPrincipal>
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="b096dd00-c4e7-4c0d-93b5-99ac6ab973d0">
+      <ventanaSecundaria Id="41c1f420-9d47-468b-81a8-163866495336" nombre="Nosotros" alto="720" ancho="1080" modal="false">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="cc6810b1-dc16-4601-994d-fe0cb4661a17">
+            <boton Id="70c4da99-8016-4027-b8a8-0cf237816bfb" titulo="Cerrar">
+              <estadoFinal>
+                <itemReferencesEstadoFinal Id="b24a9f81-baee-4eb3-95d4-94ed9285f154">
+                  <estadoFinalMoniker Id="13f7699b-9dcd-4e56-ba23-7a1854a7378c" />
+                </itemReferencesEstadoFinal>
+              </estadoFinal>
+            </boton>
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="5d5584ad-f0a2-4f8f-9253-6ab44abee79e">
+            <boton Id="348a67d9-4488-4b86-b391-481c3fcd46da" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="fef7ac72-472d-4306-ab57-11532e7d601d">
+                  <ventanaPrincipalMoniker Id="f0898869-5fea-4046-91a7-81e73b3ea086" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <menuPertenece>
+          <ventanaHasMenuPertenece Id="f539b014-c683-4d99-a771-a28ad613e791">
+            <menu Id="42765fb6-d1dc-4b91-8b87-07fdf0fa9fd7" nombre="Personas">
+              <itemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="83d24b80-1922-4f99-a7c0-97b1d49df973">
+                  <itemMenu Id="96e59321-9dce-4b35-9fef-1a214faecbd9" titulo="Javier">
+                    <ventana>
+                      <itemReferencesVentana Id="096fb585-a7e2-43ef-9ec3-8254471950e6">
+                        <ventanaSecundariaMoniker Id="30f204d2-f3ae-4de2-ab5e-fb6714710bf4" />
+                      </itemReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="3a46bf6a-58bf-4fd1-b3e0-b50949416d5a">
+                  <itemMenu Id="652c6ad6-d034-4a43-b084-ff3e0cc07d0b" titulo="Oscar">
+                    <ventana>
+                      <itemReferencesVentana Id="49b0c6c7-7c13-4c06-92cd-3ec8efbcf1b1">
+                        <ventanaSecundariaMoniker Id="fadef97b-48e0-4d95-a9da-d84590a8241f" />
+                      </itemReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="2cdba977-87d9-445a-ab72-882786fbc1c3">
+                  <itemMenu Id="1f6b780e-fe61-4d2b-b60c-14504031c65b" titulo="Ivan">
+                    <ventana>
+                      <itemReferencesVentana Id="aa28153d-41f4-4048-bbd4-1ae7be1ef37c">
+                        <ventanaSecundariaMoniker Id="64cf4f48-d5f4-42fe-83b6-034068590681" />
+                      </itemReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemPerteneceMenu>
+              </itemPerteneceMenu>
+            </menu>
+          </ventanaHasMenuPertenece>
+        </menuPertenece>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="6b5ee8b9-35e6-4a50-b4ac-17611054339c">
+      <ventanaSecundaria Id="cb87145f-ac5d-4ac0-9887-5f75b983c18a" nombre="Contacto" alto="500" ancho="500" modal="true">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="8df3dfda-e1c9-4af2-ac58-6dc36cf4441a">
+            <boton Id="2e34092f-7cee-46f7-8490-c77ce99b075d" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="1c4de77b-598b-4ed9-87ea-523580614589">
+                  <ventanaPrincipalMoniker Id="f0898869-5fea-4046-91a7-81e73b3ea086" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <entradaDeDatos>
+          <ventanaHasEntradaDeDatos Id="a1266006-8a19-46c3-949b-6424dd9576a3">
+            <checkBox Id="c4f4af69-a5b2-4002-a192-a297de35af39" titulo="AceptarComunicaciones" texto="¿Quiere recibir comunicaciones nuestras?" />
+          </ventanaHasEntradaDeDatos>
+          <ventanaHasEntradaDeDatos Id="d309ef02-0857-40c1-88a3-7fe867da8e7d">
+            <campoDeTexto Id="13d61175-ad42-4280-8656-b4615c5f362c" titulo="Mensaje a rellenar" texto="Introduzca su mensaje" />
+          </ventanaHasEntradaDeDatos>
+        </entradaDeDatos>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="76b7f815-8da9-445b-af4d-c6fb1aba3459">
+      <ventanaSecundaria Id="fadef97b-48e0-4d95-a9da-d84590a8241f" nombre="Oscar" alto="720" ancho="1080" modal="false">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="b2864c2e-6c52-4ab5-b3c9-a0686f8e3495">
+            <boton Id="025d562b-3bbb-48d0-820c-960085f9cc33" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="cd0a71fa-36cc-41f3-bc6a-c10dfc12fca6">
+                  <ventanaSecundariaMoniker Id="41c1f420-9d47-468b-81a8-163866495336" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <entradaDeDatos>
+          <ventanaHasEntradaDeDatos Id="58da2cef-0de2-4750-9ed8-71aeddd0711c">
+            <areaDeTexto Id="cf67509a-8ea7-4990-8397-a7830af96422" titulo="TextoOscar" texto="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." disposicion="UnaColumna" />
+          </ventanaHasEntradaDeDatos>
+        </entradaDeDatos>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="b40054fc-13e8-49d0-9101-c3b01dd22735">
+      <ventanaSecundaria Id="64cf4f48-d5f4-42fe-83b6-034068590681" nombre="Ivan" alto="720" ancho="1080" modal="false">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="7373309f-b392-455c-af24-c666d8bf016d">
+            <boton Id="bbc8f725-2854-4bff-86d8-c48a8a21328f" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="89715003-55c9-45bd-b6f8-1aa1b27f2542">
+                  <ventanaSecundariaMoniker Id="41c1f420-9d47-468b-81a8-163866495336" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <entradaDeDatos>
+          <ventanaHasEntradaDeDatos Id="a81020cf-6b2b-41ef-b70c-28005f20841e">
+            <areaDeTexto Id="6d29d092-3bff-4743-9a6d-26fcd6a3e52c" titulo="TextoIvan" texto="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." disposicion="UnaColumna" />
+          </ventanaHasEntradaDeDatos>
+        </entradaDeDatos>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="1ede2c7f-e983-4c07-b6c7-45bc54bac721">
+      <ventanaSecundaria Id="30f204d2-f3ae-4de2-ab5e-fb6714710bf4" nombre="Javier" alto="720" ancho="1080" modal="false">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="dafde83f-bfc1-43d2-af19-de832bd08dbc">
+            <boton Id="7bf34940-682b-4cb5-9dbd-201e4151d88b" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="ddacbb0a-11fe-42eb-986f-a627f26c130d">
+                  <ventanaSecundariaMoniker Id="41c1f420-9d47-468b-81a8-163866495336" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <entradaDeDatos>
+          <ventanaHasEntradaDeDatos Id="143242c9-f920-4998-8aef-d5d2ded60a40">
+            <areaDeTexto Id="cdafb6f0-975a-459e-9536-dca53a229fa9" titulo="TextoJavier" texto="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." disposicion="UnaColumna" />
+          </ventanaHasEntradaDeDatos>
+        </entradaDeDatos>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+  </ventanaSecundaria>
+  <estadoFinal>
+    <tapizVentanasHasEstadoFinal Id="f3b06498-878c-4f67-90a3-f6f05bb31ea1">
+      <estadoFinal Id="13f7699b-9dcd-4e56-ba23-7a1854a7378c" />
+    </tapizVentanasHasEstadoFinal>
+  </estadoFinal>
+  <clase>
+    <tapizVentanasHasClase Id="b09c0681-3569-46f6-bd1d-afac5fb8a598">
+      <clase Id="df32bdca-795e-41cf-89a2-8a0c071c9421" color="#F0F3F3" colorFondo="#17EFFF" tipoLetra="Arial" nombre="Botones">
+        <item4>
+          <claseReferencesItem4 Id="40a9e5a1-f5fc-4f2d-bd6f-e0679ac9c551">
+            <botonMoniker Id="348a67d9-4488-4b86-b391-481c3fcd46da" />
+          </claseReferencesItem4>
+          <claseReferencesItem4 Id="b735fc55-ed56-4fb2-9dec-2feae6622cda">
+            <botonMoniker Id="70c4da99-8016-4027-b8a8-0cf237816bfb" />
+          </claseReferencesItem4>
+          <claseReferencesItem4 Id="360204ed-e617-4a45-83d6-d4e7f10495af">
+            <botonMoniker Id="7bf34940-682b-4cb5-9dbd-201e4151d88b" />
+          </claseReferencesItem4>
+          <claseReferencesItem4 Id="f9b9117a-0d13-47d6-8a05-48d6d36dec7a">
+            <botonMoniker Id="025d562b-3bbb-48d0-820c-960085f9cc33" />
+          </claseReferencesItem4>
+          <claseReferencesItem4 Id="7e0668bd-ffa8-4def-ab97-969c821fdcf7">
+            <botonMoniker Id="2e34092f-7cee-46f7-8490-c77ce99b075d" />
+          </claseReferencesItem4>
+          <claseReferencesItem4 Id="ed07b2fc-02e6-4c67-b135-2b4623751895">
+            <botonMoniker Id="bbc8f725-2854-4bff-86d8-c48a8a21328f" />
+          </claseReferencesItem4>
+        </item4>
+        <componente>
+          <claseReferencesComponente Id="4b61a7eb-affc-4e28-a528-10113f62e702">
+            <componenteMoniker Id="8b55ce5f-66db-4b80-8824-0bd6e075f0c0" />
+          </claseReferencesComponente>
+        </componente>
+      </clase>
+    </tapizVentanasHasClase>
+  </clase>
+</tapizVentanas>

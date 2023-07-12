@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<iGGORCJCFProyectoIPSDiagram dslVersion="1.0.0.0" Id="aff7f2cc-1501-4be4-a43d-05a1cb26ec1f" absoluteBounds="0, 0, 22.25, 17.875" name="IGGORCJCFProyectoIPS2">
+  <tapizVentanasMoniker Id="c5cab2b5-b8f2-43cb-8b49-f18aa674d8bd" />
+  <nestedChildShapes>
+    <ventanaPrinMetafora Id="adab797c-c3ce-4f15-b580-0e2470bcd0bf" absoluteBounds="3.625, 9, 4.2509684562683105, 2.6533823013305664">
+      <ventanaPrincipalMoniker Id="f0898869-5fea-4046-91a7-81e73b3ea086" />
+      <relativeChildShapes />
+      <nestedChildShapes>
+        <componenteMetafora Id="f5eef492-6ccb-41ca-ad4f-8bfaf07da286" absoluteBounds="3.75, 9.5, 1.625, 2">
+          <componenteMoniker Id="8b55ce5f-66db-4b80-8824-0bd6e075f0c0" />
+        </componenteMetafora>
+        <botonMetafora Id="987333cc-fd4b-4230-a8f7-31f59f140aad" absoluteBounds="3.875, 10.25, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="2d51fc10-1ead-4ead-94f6-400df0725fee" />
+        </botonMetafora>
+        <botonMetafora Id="71055f5c-aab7-4b51-b166-d05e507ec715" absoluteBounds="3.875, 9.625, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="c31f8a9a-3f25-4ff7-b701-e8459a73d733" />
+        </botonMetafora>
+        <botonMetafora Id="20cba9d9-38a6-4771-ae30-19153499008f" absoluteBounds="3.875, 10.875, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="bb3108e2-ab94-4655-a2d6-dbd8634565d2" />
+        </botonMetafora>
+        <areaDeTextoMetafora Id="47eeae98-6f2e-49e8-b058-fdc65ada93f2" absoluteBounds="5.875, 10.25, 1.5975861549377441, 0.38897749781608582">
+          <areaDeTextoMoniker Id="43584ca0-5df6-4911-bc65-8272b60a3f4a" />
+          <relativeChildShapes />
+        </areaDeTextoMetafora>
+      </nestedChildShapes>
+    </ventanaPrinMetafora>
+    <componenteConnector Id="27b8f6dd-e315-4305-b246-8f5bd8e9b1d6" edgePoints="[(4.81 : 9.5); (4.81 : 9.25); (4.76069320215629 : 9.25); (4.76069320215629 : 9.625)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <componenteReferencesItemMoniker Id="bd2bb929-2f4a-4e5a-a325-3a3bef25a6bd" />
+      <nodes>
+        <componenteMetaforaMoniker Id="f5eef492-6ccb-41ca-ad4f-8bfaf07da286" />
+        <botonMetaforaMoniker Id="71055f5c-aab7-4b51-b166-d05e507ec715" />
+      </nodes>
+    </componenteConnector>
+    <componenteConnector Id="4f8df1fb-c10d-4948-b3d6-654d42dcc759" edgePoints="[(4.5625 : 11.5); (4.5625 : 11.6528695523739); (4.54181855916977 : 11.6528695523739); (4.54181855916977 : 11.2778695523739)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <componenteReferencesItemMoniker Id="44d3bbf5-61c5-4b9b-9bcb-bd2e4efbb14d" />
+      <nodes>
+        <componenteMetaforaMoniker Id="f5eef492-6ccb-41ca-ad4f-8bfaf07da286" />
+        <botonMetaforaMoniker Id="20cba9d9-38a6-4771-ae30-19153499008f" />
+      </nodes>
+    </componenteConnector>
+    <claseMetafora Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" absoluteBounds="2, 5.375, 0.66666799783706665, 0.66666799783706665">
+      <claseMoniker Id="df32bdca-795e-41cf-89a2-8a0c071c9421" />
+      <relativeChildShapes />
+    </claseMetafora>
+    <metaforaClase_Elementos Id="dcf2e4e3-b9d8-4906-8035-bdcf22782bba" edgePoints="[(2.33333399891853 : 6.04166799783707); (2.33333399891853 : 9.64757310540472); (3.75 : 9.64757310540472)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <claseReferencesComponenteMoniker Id="4b61a7eb-affc-4e28-a528-10113f62e702" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <componenteMetaforaMoniker Id="f5eef492-6ccb-41ca-ad4f-8bfaf07da286" />
+      </nodes>
+    </metaforaClase_Elementos>
+    <metaforaEstadoFinal Id="634bd6c9-f76f-4e03-9013-ee6f3fcaec18" absoluteBounds="2.5, 14.375, 0.8335232138633728, 0.8474152684211731">
+      <estadoFinalMoniker Id="13f7699b-9dcd-4e56-ba23-7a1854a7378c" />
+    </metaforaEstadoFinal>
+    <componenteConnector Id="013c1e59-05e8-4774-9a57-c6b77330d104" edgePoints="[(5.375 : 10.5); (5 : 10.5); (5 : 10.4707714835202); (5.20863711833954 : 10.4707714835202)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <componenteReferencesItemMoniker Id="37655a16-0979-4a4e-83f6-6dbc37d5c8b1" />
+      <nodes>
+        <componenteMetaforaMoniker Id="f5eef492-6ccb-41ca-ad4f-8bfaf07da286" />
+        <botonMetaforaMoniker Id="987333cc-fd4b-4230-a8f7-31f59f140aad" />
+      </nodes>
+    </componenteConnector>
+    <metaforaEstadoFinal_Item Id="411f2d50-7397-45ab-a4f9-1c05571d81a9" edgePoints="[(3.875 : 11.0764347761869); (2.91676160693169 : 11.0764347761869); (2.91676160693169 : 14.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesEstadoFinalMoniker Id="2a27f25c-c3cc-4443-889d-2309dc17d0e8" />
+      <nodes>
+        <botonMetaforaMoniker Id="20cba9d9-38a6-4771-ae30-19153499008f" />
+        <metaforaEstadoFinalMoniker Id="634bd6c9-f76f-4e03-9013-ee6f3fcaec18" />
+      </nodes>
+    </metaforaEstadoFinal_Item>
+    <ventanaSecMetafora Id="d9cb0c52-6cef-4b05-bf9c-dd03a3da0a02" absoluteBounds="9.25, 6.625, 4.1954002380371094, 2.6255981922149658">
+      <ventanaSecundariaMoniker Id="41c1f420-9d47-468b-81a8-163866495336" />
+      <relativeChildShapes />
+      <nestedChildShapes>
+        <menuMetafora Id="a2a21891-bb98-48b2-b5a8-f7b06d295d94" absoluteBounds="11.75, 7.375, 1.305853009223938, 1.7365067005157471">
+          <menuMoniker Id="42765fb6-d1dc-4b91-8b87-07fdf0fa9fd7" />
+          <relativeChildShapes />
+          <nestedChildShapes>
+            <itemMenuMetafora Id="7a11cb57-e06a-49a0-ac38-0088fa07e0cf" absoluteBounds="12, 7.625, 0.86130732297897339, 0.26394903659820557">
+              <itemMenuMoniker Id="96e59321-9dce-4b35-9fef-1a214faecbd9" />
+            </itemMenuMetafora>
+            <itemMenuMetafora Id="eb00bb07-af72-4f1d-9c0b-569f58353615" absoluteBounds="12, 8.125, 0.86130732297897339, 0.26394903659820557">
+              <itemMenuMoniker Id="652c6ad6-d034-4a43-b084-ff3e0cc07d0b" />
+            </itemMenuMetafora>
+            <itemMenuMetafora Id="76ab0807-4a53-48fc-951e-1b7142420531" absoluteBounds="12, 8.625, 0.86130732297897339, 0.26394903659820557">
+              <itemMenuMoniker Id="1f6b780e-fe61-4d2b-b60c-14504031c65b" />
+            </itemMenuMetafora>
+          </nestedChildShapes>
+        </menuMetafora>
+        <botonMetafora Id="18bc4347-b3e1-41a5-9fff-df0b210627ba" absoluteBounds="9.5, 8.375, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="70c4da99-8016-4027-b8a8-0cf237816bfb" />
+        </botonMetafora>
+        <botonMetafora Id="bac0dc4d-19c0-4e3a-ae87-7ac163f9c1bd" absoluteBounds="9.5, 7.5, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="348a67d9-4488-4b86-b391-481c3fcd46da" />
+        </botonMetafora>
+      </nestedChildShapes>
+    </ventanaSecMetafora>
+    <metaforaEstadoFinal_Item Id="92ce9172-2444-4e84-82d9-33af89fd6afa" edgePoints="[(10.1668185591698 : 8.77786955237389); (10.1668185591698 : 14.7987076342106); (3.33352321386337 : 14.7987076342106)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesEstadoFinalMoniker Id="b24a9f81-baee-4eb3-95d4-94ed9285f154" />
+      <nodes>
+        <botonMetaforaMoniker Id="18bc4347-b3e1-41a5-9fff-df0b210627ba" />
+        <metaforaEstadoFinalMoniker Id="634bd6c9-f76f-4e03-9013-ee6f3fcaec18" />
+      </nodes>
+    </metaforaEstadoFinal_Item>
+    <metaforaItem_Ventana Id="398c0992-8edc-495d-a554-031b3bd34186" edgePoints="[(10.8336371183395 : 7.70372731200363); (11.2086371183395 : 7.70372731200363); (11.2086371183395 : 10.3752990961075); (10.2501518925031 : 10.3752990961075 : JumpStart); (10.0834852258365 : 10.3752990961075 : JumpEnd); (7.87596845626831 : 10.3752990961075)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="fef7ac72-472d-4306-ab57-11532e7d601d" />
+      <nodes>
+        <botonMetaforaMoniker Id="bac0dc4d-19c0-4e3a-ae87-7ac163f9c1bd" />
+        <ventanaPrinMetaforaMoniker Id="adab797c-c3ce-4f15-b580-0e2470bcd0bf" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <ventanaSecMetafora Id="78b80645-9417-41b4-bda3-ba085ff68651" absoluteBounds="11, 11.5, 4.1954002380371094, 2.6255981922149658">
+      <ventanaSecundariaMoniker Id="cb87145f-ac5d-4ac0-9887-5f75b983c18a" />
+      <relativeChildShapes />
+      <nestedChildShapes>
+        <checkboxMetafora Id="4aeba4fb-82b2-40aa-8064-14884fa77bed" absoluteBounds="13.125, 12.25, 0.48622187972068787, 0.50011396408081055">
+          <checkBoxMoniker Id="c4f4af69-a5b2-4002-a192-a297de35af39" />
+          <relativeChildShapes />
+        </checkboxMetafora>
+        <campoDeTextoMetafora Id="0d59ff14-9fd3-44f2-be8c-efac8ed98bf3" absoluteBounds="11.375, 12.25, 1.5975861549377441, 0.38897749781608582">
+          <campoDeTextoMoniker Id="13d61175-ad42-4280-8656-b4615c5f362c" />
+          <relativeChildShapes />
+        </campoDeTextoMetafora>
+        <botonMetafora Id="f6b94213-1997-4d64-ac10-5dfb24bc8659" absoluteBounds="11.625, 13.375, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="2e34092f-7cee-46f7-8490-c77ce99b075d" />
+        </botonMetafora>
+      </nestedChildShapes>
+    </ventanaSecMetafora>
+    <metaforaItem_Ventana Id="c86c239f-e06f-4353-92b8-3dda1d3550a9" edgePoints="[(4.33289276359173 : 9.625); (4.33289276359173 : 7.8124995); (9.25 : 7.8124995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="16e6013f-cb41-4994-a213-c2083bfdae76" />
+      <nodes>
+        <botonMetaforaMoniker Id="71055f5c-aab7-4b51-b166-d05e507ec715" />
+        <ventanaSecMetaforaMoniker Id="d9cb0c52-6cef-4b05-bf9c-dd03a3da0a02" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="e6b49777-7f84-4b24-b42f-79b9952cc20a" edgePoints="[(4.54181855916977 : 10.6528695523739); (10.0877880987471 : 12.5077111307548 : JumpStart); (10.2458490195925 : 12.5605743796077 : JumpEnd); (11 : 12.8127990961075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="0acf8875-8d1e-4665-9c03-b9ca6f432182" />
+      <nodes>
+        <botonMetaforaMoniker Id="987333cc-fd4b-4230-a8f7-31f59f140aad" />
+        <ventanaSecMetaforaMoniker Id="78b80645-9417-41b4-bda3-ba085ff68651" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="3fb7940e-d73d-455f-a669-90d82a6bdef7" edgePoints="[(11.625 : 13.5764347761869); (10.2501518925031 : 13.5764347761869 : JumpStart); (10.0834852258365 : 13.5764347761869 : JumpEnd); (5.75048422813416 : 13.5764347761869); (5.75048422813416 : 11.6533823013306)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="1c4de77b-598b-4ed9-87ea-523580614589" />
+      <nodes>
+        <botonMetaforaMoniker Id="f6b94213-1997-4d64-ac10-5dfb24bc8659" />
+        <ventanaPrinMetaforaMoniker Id="adab797c-c3ce-4f15-b580-0e2470bcd0bf" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <ventanaSecMetafora Id="c8f9c787-9879-4aee-b091-4e34bede1d37" absoluteBounds="17.375, 3.25, 4.1954002380371094, 2.6255981922149658">
+      <ventanaSecundariaMoniker Id="fadef97b-48e0-4d95-a9da-d84590a8241f" />
+      <relativeChildShapes />
+      <nestedChildShapes>
+        <areaDeTextoMetafora Id="043a9f34-fd55-4f11-ac70-a8bfc5c0ee02" absoluteBounds="19.75, 4.875, 1.5975861549377441, 0.38897749781608582">
+          <areaDeTextoMoniker Id="cf67509a-8ea7-4990-8397-a7830af96422" />
+          <relativeChildShapes />
+        </areaDeTextoMetafora>
+        <botonMetafora Id="95f7e7aa-d597-4d64-aeec-0975c183cce2" absoluteBounds="17.875, 4, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="025d562b-3bbb-48d0-820c-960085f9cc33" />
+        </botonMetafora>
+      </nestedChildShapes>
+    </ventanaSecMetafora>
+    <ventanaSecMetafora Id="6f61ad9d-1973-4129-b0a8-0fe7dc0f5eff" absoluteBounds="17.75, 8.5, 4.1954002380371094, 2.6255981922149658">
+      <ventanaSecundariaMoniker Id="64cf4f48-d5f4-42fe-83b6-034068590681" />
+      <relativeChildShapes />
+      <nestedChildShapes>
+        <areaDeTextoMetafora Id="17f37530-0ce1-4c0f-8cdf-ed6b2a71eedb" absoluteBounds="20.125, 9.625, 1.5975861549377441, 0.38897749781608582">
+          <areaDeTextoMoniker Id="6d29d092-3bff-4743-9a6d-26fcd6a3e52c" />
+          <relativeChildShapes />
+        </areaDeTextoMetafora>
+        <botonMetafora Id="26b9859a-23f2-476e-a42b-f272ed9ec9ca" absoluteBounds="18.125, 9.625, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="bbc8f725-2854-4bff-86d8-c48a8a21328f" />
+        </botonMetafora>
+      </nestedChildShapes>
+    </ventanaSecMetafora>
+    <ventanaSecMetafora Id="1bf8d431-9cd8-4ef3-b5c1-9da4dd357820" absoluteBounds="10.875, 1.625, 4.1954002380371094, 2.6255981922149658">
+      <ventanaSecundariaMoniker Id="30f204d2-f3ae-4de2-ab5e-fb6714710bf4" />
+      <relativeChildShapes />
+      <nestedChildShapes>
+        <areaDeTextoMetafora Id="214aba95-9ecb-4e13-ae03-09c83db836a1" absoluteBounds="12.5, 2.625, 1.5975861549377441, 0.38897749781608582">
+          <areaDeTextoMoniker Id="cdafb6f0-975a-459e-9536-dca53a229fa9" />
+          <relativeChildShapes />
+        </areaDeTextoMetafora>
+        <botonMetafora Id="3ebaf523-f1b8-4458-b722-d843f099e68b" absoluteBounds="11, 3.625, 1.3336371183395386, 0.40286955237388611">
+          <botonMoniker Id="7bf34940-682b-4cb5-9dbd-201e4151d88b" />
+        </botonMetafora>
+      </nestedChildShapes>
+    </ventanaSecMetafora>
+    <metaforaItem_Ventana Id="864783c8-5de2-4ead-ba36-db549fb58ff4" edgePoints="[(12.792431384325 : 7.625); (12.792431384325 : 4.25059819221497)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="096fb585-a7e2-43ef-9ec3-8254471950e6" />
+      <nodes>
+        <itemMenuMetaforaMoniker Id="7a11cb57-e06a-49a0-ac38-0088fa07e0cf" />
+        <ventanaSecMetaforaMoniker Id="1bf8d431-9cd8-4ef3-b5c1-9da4dd357820" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="de751a86-7666-4085-ae2e-be317a3c35f4" edgePoints="[(11.6668185591698 : 4.02786955237389); (11.6668185591698 : 6.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="ddacbb0a-11fe-42eb-986f-a627f26c130d" />
+      <nodes>
+        <botonMetaforaMoniker Id="3ebaf523-f1b8-4458-b722-d843f099e68b" />
+        <ventanaSecMetaforaMoniker Id="d9cb0c52-6cef-4b05-bf9c-dd03a3da0a02" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="6f0c8c20-a8d7-463b-a2bc-bd7a5908d15b" edgePoints="[(17.875 : 4.40286955237389); (17.875 : 6.625); (13.4454002380371 : 6.625)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="cd0a71fa-36cc-41f3-bc6a-c10dfc12fca6" />
+      <nodes>
+        <botonMetaforaMoniker Id="95f7e7aa-d597-4d64-aeec-0975c183cce2" />
+        <ventanaSecMetaforaMoniker Id="d9cb0c52-6cef-4b05-bf9c-dd03a3da0a02" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="9236a6f2-354c-4efe-9e76-1b071944b498" edgePoints="[(12.861307322979 : 8.2569745182991); (19.7227001190186 : 8.2569745182991); (19.7227001190186 : 5.87559819221497)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="49b0c6c7-7c13-4c06-92cd-3ec8efbcf1b1" />
+      <nodes>
+        <itemMenuMetaforaMoniker Id="eb00bb07-af72-4f1d-9c0b-569f58353615" />
+        <ventanaSecMetaforaMoniker Id="c8f9c787-9879-4aee-b091-4e34bede1d37" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="b3632362-7366-47b6-85b0-d2dcc1a2aa14" edgePoints="[(12.861307322979 : 8.73840301057228); (17.75 : 8.7673312328658)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="aa28153d-41f4-4048-bbd4-1ae7be1ef37c" />
+      <nodes>
+        <itemMenuMetaforaMoniker Id="76ab0807-4a53-48fc-951e-1b7142420531" />
+        <ventanaSecMetaforaMoniker Id="6f61ad9d-1973-4129-b0a8-0fe7dc0f5eff" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaItem_Ventana Id="55c9f7f6-cfce-49a8-933b-4fc514862024" edgePoints="[(18.125 : 9.82643477618694); (12.3270186781883 : 9.82643477618694); (12.3270186781883 : 9.25059819221497)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <itemReferencesVentanaMoniker Id="89715003-55c9-45bd-b6f8-1aa1b27f2542" />
+      <nodes>
+        <botonMetaforaMoniker Id="26b9859a-23f2-476e-a42b-f272ed9ec9ca" />
+        <ventanaSecMetaforaMoniker Id="d9cb0c52-6cef-4b05-bf9c-dd03a3da0a02" />
+      </nodes>
+    </metaforaItem_Ventana>
+    <metaforaClase_Elementos Id="3b2c78fe-2e7d-4ca9-abd8-2132b909a468" edgePoints="[(2.66666799783707 : 5.67090890996682); (10.1668185591698 : 5.67090890996682); (10.1668185591698 : 7.5)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <claseReferencesItem4Moniker Id="40a9e5a1-f5fc-4f2d-bd6f-e0679ac9c551" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <botonMetaforaMoniker Id="bac0dc4d-19c0-4e3a-ae87-7ac163f9c1bd" />
+      </nodes>
+    </metaforaClase_Elementos>
+    <metaforaClase_Elementos Id="0f1ea3fd-da6b-400b-b9bf-1e89f20b87ea" edgePoints="[(2.5312529983778 : 6.04166799783707); (2.5312529983778 : 8.57643477618694); (4.2495594302584 : 8.57643477618694 : JumpStart); (4.41622609692506 : 8.57643477618694 : JumpEnd); (9.5 : 8.57643477618694)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <claseReferencesItem4Moniker Id="b735fc55-ed56-4fb2-9dec-2feae6622cda" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <botonMetaforaMoniker Id="18bc4347-b3e1-41a5-9fff-df0b210627ba" />
+      </nodes>
+    </metaforaClase_Elementos>
+    <metaforaClase_Elementos Id="da5d39df-4478-4911-afba-eb3faa4f2657" edgePoints="[(2.66666799783707 : 5.54023149730158); (3.36314756412818 : 5.54023149730158); (3.36314756412818 : 3.82643477618694); (11 : 3.82643477618694)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
+      <claseReferencesItem4Moniker Id="360204ed-e617-4a45-83d6-d4e7f10495af" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <botonMetaforaMoniker Id="3ebaf523-f1b8-4458-b722-d843f099e68b" />
+      </nodes>
+    </metaforaClase_Elementos>
+    <metaforaClase_Elementos Id="805fff78-9080-4a88-a437-6c8c1c692268" edgePoints="[(2.31482090607763 : 5.375); (2.31482090607763 : 0.862294301296814); (18.3870528163896 : 0.862294301296814); (18.3870528163896 : 4)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller">
+      <claseReferencesItem4Moniker Id="f9b9117a-0d13-47d6-8a05-48d6d36dec7a" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <botonMetaforaMoniker Id="95f7e7aa-d597-4d64-aeec-0975c183cce2" />
+      </nodes>
+    </metaforaClase_Elementos>
+    <metaforaClase_Elementos Id="8d6df67a-d124-4cac-b04f-e778682fdaa6" edgePoints="[(2.13541499945927 : 6.04166799783707); (2.13541499945927 : 16.0105152123368); (12.2361212982565 : 16.0105152123368); (12.2361212982565 : 13.7778695523739)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+      <claseReferencesItem4Moniker Id="7e0668bd-ffa8-4def-ab97-969c821fdcf7" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <botonMetaforaMoniker Id="f6b94213-1997-4d64-ac10-5dfb24bc8659" />
+      </nodes>
+    </metaforaClase_Elementos>
+    <metaforaClase_Elementos Id="c9b36d53-0a7a-4681-a190-5e5a8bfdb12c" edgePoints="[(2 : 5.84997577679773); (0.762078931610744 : 5.84997577679773); (0.762078931610744 : 17.3485108858189); (18.7918185591698 : 17.3485108858189); (18.7918185591698 : 10.0278695523739)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
+      <claseReferencesItem4Moniker Id="ed07b2fc-02e6-4c67-b135-2b4623751895" />
+      <nodes>
+        <claseMetaforaMoniker Id="755fb8f4-6c7d-4a47-bdc4-dc356a3277b0" />
+        <botonMetaforaMoniker Id="26b9859a-23f2-476e-a42b-f272ed9ec9ca" />
+      </nodes>
+    </metaforaClase_Elementos>
+  </nestedChildShapes>
+</iGGORCJCFProyectoIPSDiagram>

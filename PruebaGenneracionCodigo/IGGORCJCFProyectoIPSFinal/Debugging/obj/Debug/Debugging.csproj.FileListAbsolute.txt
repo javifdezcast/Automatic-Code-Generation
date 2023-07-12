@@ -1,0 +1,24 @@
+C:\Users\IVAN-PC\Desktop\IGGORCJCFProyectoIPS\Debugging\bin\Debug\Debugging.dll
+C:\Users\IVAN-PC\Desktop\IGGORCJCFProyectoIPS\Debugging\bin\Debug\Debugging.pdb
+C:\Users\IVAN-PC\Desktop\IGGORCJCFProyectoIPS\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\IVAN-PC\Desktop\IGGORCJCFProyectoIPS\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\IVAN-PC\Desktop\IGGORCJCFProyectoIPS\Debugging\obj\Debug\Debugging.dll
+C:\Users\IVAN-PC\Desktop\IGGORCJCFProyectoIPS\Debugging\obj\Debug\Debugging.pdb
+C:\Users\oscar\Desktop\IGGORCJCFProyectoIPSFinal\Debugging\bin\Debug\Debugging.dll
+C:\Users\oscar\Desktop\IGGORCJCFProyectoIPSFinal\Debugging\bin\Debug\Debugging.pdb
+C:\Users\oscar\Desktop\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\oscar\Desktop\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Desktop\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.dll
+C:\Users\oscar\Desktop\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.pdb
+C:\Users\oscar\Desktop\PruebaGenneracionCodigoJava\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\bin\Debug\Debugging.dll
+C:\Users\oscar\Desktop\PruebaGenneracionCodigoJava\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\bin\Debug\Debugging.pdb
+C:\Users\oscar\Desktop\PruebaGenneracionCodigoJava\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\oscar\Desktop\PruebaGenneracionCodigoJava\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Desktop\PruebaGenneracionCodigoJava\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.dll
+C:\Users\oscar\Desktop\PruebaGenneracionCodigoJava\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.pdb
+C:\Users\iggar\OneDrive\Escritorio\IPS FINAL\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\bin\Debug\Debugging.dll
+C:\Users\iggar\OneDrive\Escritorio\IPS FINAL\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\bin\Debug\Debugging.pdb
+C:\Users\iggar\OneDrive\Escritorio\IPS FINAL\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\iggar\OneDrive\Escritorio\IPS FINAL\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\iggar\OneDrive\Escritorio\IPS FINAL\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.dll
+C:\Users\iggar\OneDrive\Escritorio\IPS FINAL\PruebaGenneracionCodigo\IGGORCJCFProyectoIPSFinal\Debugging\obj\Debug\Debugging.pdb

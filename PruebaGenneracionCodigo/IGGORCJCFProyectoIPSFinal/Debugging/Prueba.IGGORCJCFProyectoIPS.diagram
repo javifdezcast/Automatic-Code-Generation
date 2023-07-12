@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<iGGORCJCFProyectoIPSDiagram dslVersion="1.0.0.0" Id="35806c17-229b-4c10-a6e8-b02a686e6646" absoluteBounds="0, 0, 11, 8.5" name="Prueba">
+  <tapizVentanasMoniker Id="184a54cf-a55f-4569-aaa7-a49021e6d94e" />
+  <nestedChildShapes>
+    <ventanaSecundarialMetafora1 Id="7af5810d-6b8a-437a-9e5f-03bebd400bb0" absoluteBounds="2.25, 1.375, 1.5, 1">
+      <ventanaSecundariaMoniker Id="2c8762a9-0839-473e-9bb0-73432425e517" />
+      <relativeChildShapes />
+    </ventanaSecundarialMetafora1>
+    <ventanaPrincipalMetafora Id="a66a52b6-16a7-4551-9645-76d1dcd54aed" absoluteBounds="0.5, 0.5, 1.5, 1">
+      <ventanaPrincipalMoniker Id="d323b9e7-a338-46b2-9ae1-d95c839af188" />
+      <relativeChildShapes />
+    </ventanaPrincipalMetafora>
+  </nestedChildShapes>
+</iGGORCJCFProyectoIPSDiagram>

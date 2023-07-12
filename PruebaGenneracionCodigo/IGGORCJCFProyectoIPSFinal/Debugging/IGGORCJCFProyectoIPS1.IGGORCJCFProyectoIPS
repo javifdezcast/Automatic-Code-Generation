@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="031b246a-2a70-432b-8c8b-d86aa83f0f93" xmlns="http://schemas.microsoft.com/dsltools/IGGORCJCFProyectoIPS">
+  <ventanaPrincipal>
+    <tapizVentanasHasVentanaPrincipal Id="e18876ee-ecad-4c0a-8ca4-f78df4a691db">
+      <ventanaPrincipal Id="0f1e2822-954b-4476-a38c-c5844daf6b41" nombre="VentanaPrincipal" alto="700" ancho="700">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="5e466367-955c-4462-87a3-475e36d6bb7a">
+            <boton Id="57a6429b-368a-4f5d-9412-dc07a424ff22" titulo="IrVentana2">
+              <ventana>
+                <itemReferencesVentana Id="a7a7f0f2-edf7-4848-9da1-a7e0a1e2f302">
+                  <ventanaSecundariaMoniker Id="2142c61a-78e8-4e47-8157-c47aa741ed9e" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <menuPertenece>
+          <ventanaHasMenuPertenece Id="60b5f280-3c06-4ca7-9510-952871febf75">
+            <menu Id="903e9190-082e-44a4-90ee-6e222904dbcf" nombre="Menu1">
+              <itemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="16401088-3d12-4e7d-be81-8507c8f116bd">
+                  <itemMenu Id="f9a30ba9-8c99-49f4-b5f5-ce7f96c28c55" titulo="IrVentana 1">
+                    <ventana>
+                      <itemReferencesVentana Id="2a6258b3-bc35-4ad2-847d-956fc0348862">
+                        <ventanaSecundariaMoniker Id="6ea37894-e1e2-476e-b0b7-1007c6089923" />
+                      </itemReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="1096ac6f-7fb3-47d0-b5fa-53662691d212">
+                  <itemMenu Id="14c0741a-bee1-4cae-93a2-61779b884c1b" titulo="NoHaceNada" />
+                </menuHasItemPerteneceMenu>
+              </itemPerteneceMenu>
+            </menu>
+          </ventanaHasMenuPertenece>
+          <ventanaHasMenuPertenece Id="af607934-2826-43c3-aaa8-55faf58c187d">
+            <menu Id="e033a8c3-8a2d-4295-97cd-ddbe3e0af188" nombre="Menu2">
+              <itemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="d9ade206-43ec-45a0-b4ca-0c6df79b0250">
+                  <itemMenu Id="825a7ade-6198-4261-9164-9ee53f13f4f4" titulo="CerrarApp">
+                    <estadoFinal>
+                      <itemReferencesEstadoFinal Id="a0b455a6-1627-4b50-9ff8-0215be83b465">
+                        <estadoFinalMoniker Id="d11aa2bc-62ea-4bde-add6-b89128c0939a" />
+                      </itemReferencesEstadoFinal>
+                    </estadoFinal>
+                  </itemMenu>
+                </menuHasItemPerteneceMenu>
+              </itemPerteneceMenu>
+            </menu>
+          </ventanaHasMenuPertenece>
+        </menuPertenece>
+      </ventanaPrincipal>
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="62badfd6-85af-40ea-9f17-43722d1f7407">
+      <ventanaSecundaria Id="6ea37894-e1e2-476e-b0b7-1007c6089923" nombre="VentanaS1" alto="400" ancho="400" modal="true">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="0ded5562-c3f7-496c-b430-ce553fc31033">
+            <boton Id="f163026d-2530-4e8a-b8ed-ca89c4d91a0e" titulo="IrVentana3">
+              <ventana>
+                <itemReferencesVentana Id="5cd2ceb2-e9c6-4224-922f-f1a5b13614e2">
+                  <ventanaSecundariaMoniker Id="d744f676-d70a-4223-9793-895ee6e12125" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="bcd62bb8-154e-452e-9025-8ac27f66beb5">
+            <boton Id="870c951a-609a-4ae7-8cdf-93334f9451f7" titulo="NoHaceNa" />
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+        <menuPertenece>
+          <ventanaHasMenuPertenece Id="9baaaf08-6208-43f9-b519-54209bab4fb9">
+            <menu Id="a807271c-792c-4532-8eaa-c2bad7739951" nombre="MenuVentana1">
+              <itemPerteneceMenu>
+                <menuHasItemPerteneceMenu Id="3a094f4f-1e78-47aa-9a4e-0072056b4ecf">
+                  <itemMenu Id="249bdc53-12b4-4c24-b0e6-427f32223c72" titulo="Atras">
+                    <ventana>
+                      <itemReferencesVentana Id="bb3eb4b7-2c0d-4d0c-a9ea-8c556e245bc1">
+                        <ventanaPrincipalMoniker Id="0f1e2822-954b-4476-a38c-c5844daf6b41" />
+                      </itemReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemPerteneceMenu>
+              </itemPerteneceMenu>
+            </menu>
+          </ventanaHasMenuPertenece>
+        </menuPertenece>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="8a1cc1cb-a810-4416-8151-e6d63ddf9e28">
+      <ventanaSecundaria Id="2142c61a-78e8-4e47-8157-c47aa741ed9e" nombre="VentanaS2" alto="300" ancho="400" modal="false">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="39341bad-04a2-464f-8b5b-af6f99d831de">
+            <boton Id="f174def1-0143-427d-820d-bcf00435f581" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="7c66d47a-b752-4be5-85e5-c4e11b473128">
+                  <ventanaPrincipalMoniker Id="0f1e2822-954b-4476-a38c-c5844daf6b41" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="fe8b57cc-1bf2-4e8d-8040-ba25b0083ee6">
+      <ventanaSecundaria Id="d744f676-d70a-4223-9793-895ee6e12125" nombre="VentanaS3" alto="200" ancho="200" modal="false">
+        <botonPertenece>
+          <ventanaHasBotonPertenece Id="53d149a0-9214-4ca2-8154-42bf261bff8e">
+            <boton Id="6be4aa05-0827-4704-899d-15b6f27b6687" titulo="Atras">
+              <ventana>
+                <itemReferencesVentana Id="62833db4-3933-485b-944a-a5d5837e917c">
+                  <ventanaSecundariaMoniker Id="6ea37894-e1e2-476e-b0b7-1007c6089923" />
+                </itemReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="fec4f26a-7692-44da-bf32-eb04d3e4a2de">
+            <boton Id="0e8b2523-4896-493b-9b71-ceb813098140" titulo="b" />
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="1cdc1731-4e17-4701-8e60-735b5af5f00a">
+            <boton Id="013daf7b-1f83-4517-92ea-6722236fd2bb" titulo="c" />
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="8291661d-1a57-4900-8caa-c42a4ca69209">
+            <boton Id="4b1a6279-4129-4ca6-bace-9f814610cc2b" titulo="d" />
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="f5aeca78-ab0c-4ef5-9870-4d51a1314432">
+            <boton Id="f5addc82-517e-4848-8e2c-54bb1cea8ecc" titulo="CerrarApp">
+              <estadoFinal>
+                <itemReferencesEstadoFinal Id="573e5a99-2779-4046-9bba-064a47521e95">
+                  <estadoFinalMoniker Id="d11aa2bc-62ea-4bde-add6-b89128c0939a" />
+                </itemReferencesEstadoFinal>
+              </estadoFinal>
+            </boton>
+          </ventanaHasBotonPertenece>
+          <ventanaHasBotonPertenece Id="52faffe9-5a26-4e56-aa29-ec57a1bbcedc">
+            <boton Id="88a73ecd-ba3e-4573-9c5f-5ef4070afb34" titulo="f" />
+          </ventanaHasBotonPertenece>
+        </botonPertenece>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+  </ventanaSecundaria>
+  <estadoFinal>
+    <tapizVentanasHasEstadoFinal Id="a563020c-295a-453f-a748-f9ad3952e65b">
+      <estadoFinal Id="d11aa2bc-62ea-4bde-add6-b89128c0939a" />
+    </tapizVentanasHasEstadoFinal>
+  </estadoFinal>
+</tapizVentanas>

@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: black;
+    font-family: MS Sans Serif;
+}
+
+header{
+    padding: 0 5px;
+    height: 60px;
+    width: 100vw;
+    background: #BEC1C2;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+}
+
+#logo{
+    width: auto;
+    display: flex;
+    border-bottom: 4px solid black;
+    border-style: outset;
+    align-items: center;
+}
+#logo:hover > .vertical-menu{
+    visibility: visible;
+}
+
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+    position: absolute;
+    margin-left: -10px;
+    bottom: 3.5rem;
+    visibility: hidden;
+    text-align: center;
+}
+
+.vertical-menu > div {
+    background: #BEC1C2; /* Grey background color */
+    color: black; /* Black text color */
+    display: flex; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    justify-content: space-between;
+}
+
+.vertical-menu div:hover > .vertical{
+    visibility: visible;
+}
+
+.vertical{
+    position: absolute;
+    left: 200px;
+    background: #BEC1C2;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.vertical > a{
+    width: 200px;
+    margin: 1rem 0rem 1rem 1rem;
+    text-align: initial;
+}
+
+.vertical a:hover{
+    background-color: blue;
+    color: white;
+}
+
+.submenu{
+    border-top: 0.1rem dotted;
+    padding-left: 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+#Capa_1{
+    fill:#1d1d1b;
+}
+.submenu:hover{
+    background-color: blue;
+    color: white;
+}
+.submenu:hover> #Capa_1{
+    fill:white;
+}
+
+#menu_navegacion nav li ul li{
+    padding-bottom: 1rem;
+}
+#menu_navegacion nav li:hover >ul{
+    visibility: visible;
+}
+
+#boton_container{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: grid;
+    gap: 1rem;
+   grid-template-columns: repeat(auto-fill,minmax(min(100%,20rem),1fr));
+    margin-top:1rem;
+}
+
+button:focus{
+    outline:none;
+}
+
+.box{
+    width:292px;
+    background:#C0C0C0;
+    border-width:1px;
+border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    border-style:solid;
+    padding:1px;
+}
+
+div.title{
+    height:18px;
+    width:100%;
+    background:#BEC1C2;
+    color:#FFF;
+}
+
+img.title{
+    float:left;
+}
+
+p.title{
+    margin:2px 0 0 1px;
+    float:left;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:11px;
+}
+
+.title button{
+	   margin:2px 2px 2px 0;
+    float:right;
+    width:14px;
+    height:13.5px;
+    background:#C0C0C0;
+    border-width:1px;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    padding:0;
+    font-size:9px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+    focus:none;
+}
+
+div.body{
+    padding:13px 12px 12px;
+    height:100%;
+    width:calc(100% - 26px);
+    display:inline-block;
+}
+div.body p{
+font-family:"MS Sans Serif";
+    font-size:11px;
+}
+div.body button{
+    font-family:"MS Sans Serif";
+    font-size:11px;
+    outline:1px solid #000000;
+    background:#C0C0C0;
+    border-width:1px;
+    border-style:solid;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    padding:4px 10px;
+    margin:20px auto 3px;
+    display:block;
+    position:relative;
+    bottom:0px;
+}
+h3{
+    padding-right: 0.5rem;
+}
+
+body{
+background-image: url("wallpaperbetter.com_1920x1200.jpg");
+}

@@ -1,0 +1,259 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"
+language="C#" hostspecific="True"#>
+<#@ output extension=".py" #>
+<#@ IGGORCJCFProyectoIPS processor="IGGORCJCFProyectoIPSDirectiveProcessor"
+requires="fileName='IGGORCJCFProyectoIPS1.IGGORCJCFProyectoIPS'" #>
+
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#
+
+	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+	VentanaPrincipal ventanaP = this.TapizVentanas.VentanaPrincipal;
+	if(ventanaP==null){
+		WriteLine("El tapiz está vacío");
+	}
+	else{
+		fileManager.StartNewFile("Aplicacion.py");
+		WriteLine("import tkinter as tk");
+		WriteLine("");
+
+		WriteLine("from " + ventanaP.nombre + " import " + ventanaP.nombre);
+		WriteLine("");
+
+		WriteLine("def main():");
+			WriteLine("	root = tk.Tk()");
+			WriteLine("	vp_" + ventanaP.nombre + " = " + ventanaP.nombre + "(root)");
+			WriteLine("	root.mainloop()");
+			WriteLine("");
+
+		WriteLine("if __name__ == '__main__':");
+			WriteLine("	main()");
+
+		fileManager.StartNewFile(ventanaP.nombre + ".py");
+		WriteLine("from tkinter import *");
+		WriteLine("");
+
+		List<VentanaSecundaria> listaHijas = new List<VentanaSecundaria>();
+		foreach(Boton b in ventanaP.BotonPertenece){
+			if (b.Ventana != null && !listaHijas.Contains((VentanaSecundaria)b.Ventana)){
+				listaHijas.Add((VentanaSecundaria)b.Ventana);
+				WriteLine("from " + b.Ventana.nombre + " import " + b.Ventana.nombre);
+			}
+		}
+		foreach(Menu m in ventanaP.MenuPertenece){
+			foreach(ItemMenu im in m.ItemPerteneceMenu ){
+				if(im.Ventana != null && !listaHijas.Contains((VentanaSecundaria)im.Ventana)){
+					listaHijas.Add((VentanaSecundaria)im.Ventana);
+					WriteLine("from " + im.Ventana.nombre + " import " + im.Ventana.nombre);
+				}
+			}
+		}
+
+		WriteLine("");
+
+		WriteLine("class " + ventanaP.nombre + ":");
+			WriteLine("	def __init__(self, master):");
+				WriteLine("		self.master = master");
+				WriteLine("		self.master.title('" + ventanaP.nombre + "')" );
+				WriteLine("		self.master.geometry('" + ventanaP.ancho + "x" + ventanaP.alto + "')" );
+				WriteLine("");
+
+				WriteLine("		self.inicializar_gui()");
+				WriteLine("");
+
+			WriteLine("	def inicializar_gui(self):");
+			WriteLine("");
+
+				WriteLine("		'''Creamos la siguiente barra para aniadir los menus'''");
+					WriteLine("		barraMenu = Menu(self.master)");
+					WriteLine("");
+			
+					foreach (Menu menu in ventanaP.MenuPertenece){
+						WriteLine("		'''Ponemos un nuevo menu'''");
+						WriteLine("		" + menu.nombre + " = Menu(barraMenu, tearoff=0)");
+						foreach (ItemMenu itemMenu in menu.ItemPerteneceMenu){
+							if (itemMenu.Ventana != null ){
+								WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "', command = lambda: self.abrir_" + itemMenu.Ventana.nombre +"())");
+							}
+							else if (itemMenu.EstadoFinal != null){
+								WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "', command = lambda: self.cerrarApp())");
+							}else{
+								WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "')");
+							}
+						}
+						WriteLine("		barraMenu.add_cascade(label = '" + menu.nombre + "', menu = " + menu.nombre + ")");
+						WriteLine("");
+					}
+
+					WriteLine("		'''Asignamos los menus a la ventana'''");
+					WriteLine("		self.master.configure(menu = barraMenu)");
+					WriteLine("");		
+					
+					WriteLine("		'''Ahora vamos a poner los diferentes botones'''");
+					int botones = 0;
+					int filas = 0;
+					foreach (Boton boton in ventanaP.BotonPertenece){
+						botones++;
+						filas = (botones-1)/3;
+						WriteLine("		'''Ponemos un nuevo boton'''");
+						if (boton.Ventana != null) {
+							WriteLine("		" + boton.titulo + " = Button(self.master, text = '" + boton.titulo +"', command = lambda: self.abrir_" + boton.Ventana.nombre +"())" );
+						}else if(boton.EstadoFinal != null){
+							WriteLine("		" + boton.titulo + " = Button(self.master, text = '" + boton.titulo +"', command = lambda: self.cerrarApp())" );
+						}else{
+							WriteLine("		" + boton.titulo + " = Button(self.master, text = '" + boton.titulo +"')" );
+						}
+						WriteLine("		" + boton.titulo + ".grid( row = " + filas + ", column = " + (botones-1)%3 + ", sticky = 'nsew', padx = 5, pady = 3)" );
+						WriteLine("");
+					}
+
+					WriteLine("		'''Configuramos el grid donde colocamos los botones'''");
+					if(botones<3){
+						for (int i=0; i<botones; i++){
+							WriteLine("		self.master.columnconfigure(" + i + ", weight = 1)");
+						}
+					}else {
+						for (int i=0; i<3; i++){
+							WriteLine("		self.master.columnconfigure(" + i + ", weight = 1)");
+						}
+					}
+					for (int i=0; i<filas+1; i++){
+						WriteLine("		self.master.rowconfigure(" + i + ", weight = 1)");
+					}	
+					WriteLine("");
+
+			foreach(VentanaSecundaria ventanaHija in listaHijas){
+				WriteLine("	def abrir_" + ventanaHija.nombre + " (self):");
+					WriteLine("		vs_" + ventanaHija.nombre + " = " + ventanaHija.nombre + "(self, self)");
+					WriteLine("		self.master.wait_window(vs_" + ventanaHija.nombre + ".ventana)");
+			}
+			WriteLine("");
+
+			WriteLine("	def cerrarApp(self):");
+				WriteLine("		self.master.destroy()");
+
+			foreach(VentanaSecundaria ventanaHija in listaHijas){
+				ventanasHijas(ventanaHija, ventanaP);
+			}
+	}
+	
+	void ventanasHijas(VentanaSecundaria ventanaS, Ventana padre){
+		fileManager.StartNewFile(ventanaS.nombre + ".py");	
+		WriteLine("from tkinter import *");
+		WriteLine("");
+
+		List<VentanaSecundaria> listaHijasS = new List<VentanaSecundaria>();
+
+		foreach(Boton b in ventanaS.BotonPertenece){
+			if (b.Ventana != null && (Ventana)b.Ventana != padre  && !listaHijasS.Contains((VentanaSecundaria)b.Ventana)){
+				listaHijasS.Add((VentanaSecundaria)b.Ventana);
+				WriteLine("from " + b.Ventana.nombre + " import " + b.Ventana.nombre);
+			}
+		}
+		foreach(Menu m in ventanaS.MenuPertenece){
+			foreach(ItemMenu im in m.ItemPerteneceMenu ){
+				if((Ventana)im.Ventana != padre && im.Ventana != null && !listaHijasS.Contains((VentanaSecundaria)im.Ventana)){
+					listaHijasS.Add((VentanaSecundaria)im.Ventana);
+					WriteLine("from " + im.Ventana.nombre + " import " + im.Ventana.nombre);
+				}
+			}
+		}
+
+		WriteLine("class " + ventanaS.nombre +":");
+		WriteLine("");
+					
+			WriteLine("	def __init__(self,master, root):");
+				WriteLine("		self.root = root");
+				WriteLine("		self.master = master");
+				WriteLine("		self.ventana = Toplevel(name='vs_" + ventanaS.nombre +"')");
+				if(ventanaS.modal == true){
+					WriteLine("		self.ventana.grab_set()");
+				}
+				WriteLine("		self.ventana.geometry('" + ventanaS.ancho + "x" + ventanaS.alto + "')");
+				WriteLine("		self.ventana.title('" + ventanaS.nombre + "')");
+				WriteLine("		self.inicializar_gui()");
+				WriteLine("");
+
+			WriteLine("	def inicializar_gui(self):");
+			WriteLine("");
+
+				WriteLine("		'''Creamos la siguiente barra para aniadir los menus'''");
+				WriteLine("		barraMenu = Menu(self.ventana)");
+				WriteLine("");
+			
+				foreach (Menu menu in ventanaS.MenuPertenece){
+					WriteLine("		'''Ponemos un nuevo menu'''");
+					WriteLine("		" + menu.nombre + " = Menu(barraMenu, tearoff=0)");
+					foreach (ItemMenu itemMenu in menu.ItemPerteneceMenu){
+						if (itemMenu.Ventana != null ){
+							if(padre != (Ventana)itemMenu.Ventana){
+								WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "', command = lambda: self.abrir_" + itemMenu.Ventana.nombre +"(self.root))" );;
+							}else{
+								WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "', command = lambda: self.ventana.destroy())");
+							}
+						}
+						else if (itemMenu.EstadoFinal != null){
+							WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "', command = lambda: self.root.cerrarApp())");
+						}else{
+							WriteLine("		" + menu.nombre + ".add_command(label = '" + itemMenu.titulo + "')");
+						}
+					}
+					WriteLine("		barraMenu.add_cascade(label = '" + menu.nombre + "', menu = " + menu.nombre + ")");
+					WriteLine("");
+				}
+
+				WriteLine("		'''Asignamos los menus a la ventana'''");
+				WriteLine("		self.ventana.configure(menu = barraMenu)");
+				WriteLine("");		
+					
+				WriteLine("		'''Ahora vamos a poner los diferentes botones'''");
+				int botones = 0;
+				int filas = 0;
+				foreach (Boton boton in ventanaS.BotonPertenece){
+					botones++;
+					filas = (botones-1)/3;
+					WriteLine("		'''Ponemos un nuevo boton'''");
+					if (boton.Ventana != null) {
+						if(padre != (Ventana)boton.Ventana)
+							WriteLine("		" + boton.titulo + " = Button(self.ventana, text = '" + boton.titulo +"', command = lambda: self.abrir_" + boton.Ventana.nombre +"(self.root))" );
+						else
+							WriteLine("		" + boton.titulo + " = Button(self.ventana, text = '" + boton.titulo +"', command= lambda: self.ventana.destroy())" );
+					}else if(boton.EstadoFinal != null){
+						WriteLine("		" + boton.titulo + " = Button(self.ventana, text = '" + boton.titulo +"', command = lambda: self.root.cerrarApp())" );
+					}else{
+						WriteLine("		" + boton.titulo + " = Button(self.ventana, text = '" + boton.titulo +"')" );
+					}
+					WriteLine("		" + boton.titulo + ".grid( row = " + filas + ", column = " + (botones-1)%3 + ", sticky = 'nsew', padx = 5, pady = 3)" );
+					WriteLine("");
+				}
+
+				WriteLine("		'''Configuramos el grid donde colocamos los botones'''");
+				if(botones<3){
+					for (int i=0; i<botones; i++){
+						WriteLine("		self.ventana.columnconfigure(" + i + ", weight = 1)");
+					}
+				}else {
+					for (int i=0; i<3; i++){
+						WriteLine("		self.ventana.columnconfigure(" + i + ", weight = 1)");
+					}
+				}
+				for (int i=0; i<filas+1; i++){
+					WriteLine("		self.ventana.rowconfigure(" + i + ", weight = 1)");
+				}	
+				WriteLine("");	
+
+				foreach(VentanaSecundaria ventanaHija in listaHijasS){
+					WriteLine("	def abrir_" + ventanaHija.nombre + " (self, root):");
+						WriteLine("		vs_" + ventanaHija.nombre + " = " + ventanaHija.nombre + "(self, root)");
+						WriteLine("		self.ventana.wait_window(vs_" + ventanaHija.nombre + ".ventana)");
+				}
+
+				foreach(VentanaSecundaria ventanaHija in listaHijasS){
+					ventanasHijas(ventanaHija, ventanaS);
+				}
+	}
+	fileManager.Process();
+#>
+
+
+

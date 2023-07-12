@@ -1,0 +1,339 @@
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"
+language="C#" hostspecific="True"#>
+<#@ output extension=".java" #>
+<#@ IGGORCJCFProyectoIPS processor="IGGORCJCFProyectoIPSDirectiveProcessor"
+requires="fileName='IGGORCJCFProyectoIPS1.IGGORCJCFProyectoIPS'" #>
+
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#
+
+	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+	
+	VentanaPrincipal ventanaP = this.TapizVentanas.VentanaPrincipal;
+	int botones=0;
+	if(ventanaP==null)
+		botones=0;
+	else{
+		//Creamos un fichero Java con la implementacion necesaria del objeto ItemMenu
+		fileManager.StartNewFile("ItemMenu.java");
+		WriteLine("package com.company;");
+		WriteLine("import javax.swing.*;");
+		WriteLine("import java.awt.event.ActionEvent;");
+		WriteLine("import java.awt.event.ActionListener;");
+		WriteLine("");
+		WriteLine("public class ItemMenu implements ActionListener {");
+		WriteLine("    public JFrame origen;");
+		WriteLine("    public JFrame destino;");
+		WriteLine("    public JMenuItem jMenuItem;");
+		WriteLine("");
+		WriteLine("    public JFrame getDestino() {");
+		WriteLine("        return destino;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public void setDestino(JFrame destino) {");
+		WriteLine("        this.destino = destino;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public JFrame getOrigen() {");
+		WriteLine("        return origen;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public void setOrigen(JFrame origen) {");
+		WriteLine("        this.origen = origen;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public JMenuItem getJMenuItem() {");
+		WriteLine("        return jMenuItem;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public void setJMenuItem(JMenuItem jMenuItem) {");
+		WriteLine("        this.jMenuItem = jMenuItem;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("");
+		WriteLine("    public ItemMenu(String titulo, JFrame origen, JFrame destino) {");
+		WriteLine("        this.setOrigen(origen);");
+		WriteLine("        this.setDestino(destino);");
+		WriteLine("        this.setJMenuItem(new JMenuItem(titulo));");
+		WriteLine("        this.getJMenuItem().addActionListener(this);");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public ItemMenu(String titulo, JFrame origen) {");
+		WriteLine("        this.setOrigen(origen);");
+		WriteLine("        this.destino = null;");
+		WriteLine("        this.setJMenuItem(new JMenuItem(titulo));");
+		WriteLine("        this.getJMenuItem().addActionListener(this);");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    @Override");
+		WriteLine("    public void actionPerformed(ActionEvent e) {");
+		WriteLine("        /*El origen es normal*/");
+		WriteLine("        if (this.getOrigen().getDefaultCloseOperation()==WindowConstants.EXIT_ON_CLOSE){");
+		WriteLine("            /*El destino es el estado final*/");
+		WriteLine("            if(this.getDestino()==null){");
+		WriteLine("                System.exit(3);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es normal*/");
+		WriteLine("            else if(this.getDestino().getDefaultCloseOperation()==WindowConstants.EXIT_ON_CLOSE){");
+		WriteLine("                this.getDestino().setVisible(true);");
+		WriteLine("                this.getOrigen().setVisible(false);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es modal*/");
+		WriteLine("            else if (this.getDestino().getDefaultCloseOperation()==WindowConstants.DO_NOTHING_ON_CLOSE){");
+		WriteLine("                this.getOrigen().setEnabled(false);");
+		WriteLine("                this.getDestino().setVisible(true);");
+		WriteLine("            }");
+		WriteLine("        } /*El origen es modal*/");
+		WriteLine("        else if (this.getOrigen().getDefaultCloseOperation()==WindowConstants.DO_NOTHING_ON_CLOSE) {");
+		WriteLine("            /*El destino es el estado final*/");
+		WriteLine("            if(this.getDestino()==null){");
+		WriteLine("                System.exit(3);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es normal*/");
+		WriteLine("            else if(this.getDestino().getDefaultCloseOperation()==WindowConstants.EXIT_ON_CLOSE){");
+		WriteLine("                this.getOrigen().setVisible(false);");
+		WriteLine("                this.getDestino().setEnabled(true);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es modal*/");
+		WriteLine("            else if (this.getDestino().getDefaultCloseOperation()==WindowConstants.DO_NOTHING_ON_CLOSE){");
+		WriteLine("                this.getOrigen().setEnabled(false);");
+		WriteLine("                this.getDestino().setVisible(true);");
+		WriteLine("            }");
+		WriteLine("        }");
+		WriteLine("    }");
+		WriteLine("}");
+
+		//Creamos otro fichero con la implementacion necesaria del objeto Boton.
+		fileManager.StartNewFile("Boton.java");
+				WriteLine("package com.company;");
+		WriteLine("import javax.swing.*;");
+		WriteLine("import java.awt.event.ActionEvent;");
+		WriteLine("import java.awt.event.ActionListener;");
+		WriteLine("");
+		WriteLine("public class Boton implements ActionListener {");
+		WriteLine("    public JFrame origen;");
+		WriteLine("    public JFrame destino;");
+		WriteLine("    public JButton jButton;");
+		WriteLine("");
+		WriteLine("    public JButton getJButton() {");
+		WriteLine("        return jButton;");
+		WriteLine("    }");
+		WriteLine("    public void setJButton(JButton boton) {");
+		WriteLine("        this.jButton = boton;");
+		WriteLine("    }");
+		WriteLine("    public JFrame getDestino() {");
+		WriteLine("        if(this.destino==null) {");
+		WriteLine("            return null;");
+		WriteLine("        }else");
+		WriteLine("            return destino;");
+		WriteLine("    }");
+		WriteLine("    public void setDestino(JFrame destino) {");
+		WriteLine("        this.destino = destino;");
+		WriteLine("    }");
+		WriteLine("    public JFrame getOrigen() {");
+		WriteLine("        return origen;");
+		WriteLine("    }");
+		WriteLine("    public void setOrigen(JFrame origen) {");
+		WriteLine("        this.origen = origen;");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public Boton(String titulo, JFrame origen, JFrame destino) {");
+		WriteLine("        this.setOrigen(origen);");
+		WriteLine("        this.setDestino(destino);");
+		WriteLine("        this.setJButton(new JButton(titulo));");
+		WriteLine("        this.getJButton().addActionListener(this);");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    public Boton(String titulo, JFrame origen) {");
+		WriteLine("        this.setOrigen(origen);");
+		WriteLine("        this.destino=null;");
+		WriteLine("        this.setJButton(new JButton(titulo));");
+		WriteLine("        this.getJButton().addActionListener(this);");
+		WriteLine("    }");
+		WriteLine("");
+		WriteLine("    @Override");
+		WriteLine("    public void actionPerformed(ActionEvent e) {");
+		WriteLine("        /*El origen es normal*/");
+		WriteLine("        if (this.getOrigen().getDefaultCloseOperation()==WindowConstants.EXIT_ON_CLOSE){");
+		WriteLine("            /*El destino es el estado final*/");
+		WriteLine("            if(this.getDestino()==null){");
+		WriteLine("                System.exit(3);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es normal*/");
+		WriteLine("            else if(this.getDestino().getDefaultCloseOperation()==WindowConstants.EXIT_ON_CLOSE){");
+		WriteLine("                this.getDestino().setVisible(true);");
+		WriteLine("                this.getOrigen().setVisible(false);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es modal*/");
+		WriteLine("            else if (this.getDestino().getDefaultCloseOperation()==WindowConstants.DO_NOTHING_ON_CLOSE){");
+		WriteLine("                this.getOrigen().setEnabled(false);");
+		WriteLine("                this.getDestino().setVisible(true);");
+		WriteLine("            }");
+		WriteLine("        } /*El origen es modal*/");
+		WriteLine("        else if (this.getOrigen().getDefaultCloseOperation()==WindowConstants.DO_NOTHING_ON_CLOSE) {");
+		WriteLine("            /*El destino es el estado final*/");
+		WriteLine("            if(this.getDestino()==null){");
+		WriteLine("                System.exit(3);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es normal*/");
+		WriteLine("            else if(this.getDestino().getDefaultCloseOperation()==WindowConstants.EXIT_ON_CLOSE){");
+		WriteLine("                this.getOrigen().setVisible(false);");
+		WriteLine("                this.getDestino().setEnabled(true);");
+		WriteLine("            }");
+		WriteLine("            /*El destino es modal*/");
+		WriteLine("            else if (this.getDestino().getDefaultCloseOperation()==WindowConstants.DO_NOTHING_ON_CLOSE){");
+		WriteLine("                this.getOrigen().setEnabled(false);");
+		WriteLine("                this.getDestino().setVisible(true);");
+		WriteLine("            }");
+		WriteLine("        }");
+		WriteLine("    }");
+		WriteLine("}");
+
+		//Por ultimo creamos la clase principal con el método main donde se crearan las ventanas, y las instancias
+		//de objetos Boton, Item...
+		fileManager.StartNewFile(ventanaP.nombre.Replace(" ", String.Empty) + ".java");
+		WriteLine("import javax.swing.*;");
+		WriteLine("import java.awt.*;");
+		WriteLine("");						
+		WriteLine("public class Main {");
+		WriteLine("");
+		WriteLine("	public static void main(String[] args){");
+		WriteLine("");
+		WriteLine("		/*Primero creamos la ventana Principal.*/");
+		WriteLine("		JFrame " + ventanaP.nombre.Replace(" ", String.Empty) + @" = new JFrame(""" + ventanaP.nombre.Replace(" ", String.Empty) + @""");");
+		WriteLine("		" + ventanaP.nombre.Replace(" ", String.Empty) + ".setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);");
+		WriteLine("		" + ventanaP.nombre.Replace(" ", String.Empty) + ".setLocationRelativeTo(null);");				
+		WriteLine("		" + ventanaP.nombre.Replace(" ", String.Empty) + ".setSize(" + ventanaP.ancho + ", " + ventanaP.alto + ");");
+		WriteLine("");
+		WriteLine("		/*Ahora Creamos todas las ventanas secundarias*/");
+		if(this.TapizVentanas.VentanaSecundaria!=null){
+			foreach(VentanaSecundaria ventanaS in this.TapizVentanas.VentanaSecundaria){
+				WriteLine("");
+				WriteLine("		JFrame " + ventanaS.nombre.Replace(" ", String.Empty) + @" = new JFrame(""" + ventanaS.nombre.Replace(" ", String.Empty) + @""");");
+				if(ventanaS.modal){
+					WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);");
+				}else{
+					WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);");
+				}
+				WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".setLocationRelativeTo(null);");				
+				WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".setSize(" + ventanaS.ancho + ", " + ventanaS.alto + ");");
+			}
+		}
+		WriteLine("");
+		WriteLine("		/*Una vez creadas todas las ventanas podemos crear los botones, menus, e items.*/");
+		WriteLine("");
+		WriteLine("		/*Creamos un panel que contendrá los botones, si hay, con distribución cuadriculada ");
+		WriteLine("		de 3 columnas y tantas filas como sea necesario para contener los botones declarados ");
+		WriteLine("		por el usuario en el diagrama*/");
+		WriteLine("		JPanel panel = new JPanel();");
+		WriteLine("		panel.setBorder(BorderFactory.createEmptyBorder());");
+		//Contamos los botones para averiguar cuantas filas necesita el panel
+		foreach(Boton boton in ventanaP.BotonPertenece){ botones++;}
+		int filas = botones/3 + 1;
+		if(filas>3){
+			WriteLine("		/*Como hay mas de tres filas de botones, ajustamos el tamaño del panel*/");
+			WriteLine("		panel.setPreferredSize(new Dimension("+ ventanaP.ancho +", "+(ventanaP.alto/3)*filas + "));");
+		}
+		WriteLine("		panel.setLayout(new GridLayout(" + filas + ",3));");
+		WriteLine("");
+		foreach(Boton boton in ventanaP.BotonPertenece){
+			if(boton.Ventana!=null){
+				WriteLine("		Boton b" + boton.titulo.Replace(" ", String.Empty) + ventanaP.nombre.Replace(" ", String.Empty) + @" = new Boton(""" + boton.titulo.Replace(" ", String.Empty) + @""", " + ventanaP.nombre.Replace(" ", String.Empty) + ", " + boton.Ventana.nombre.Replace(" ", String.Empty) + ");");
+				WriteLine("		b" + boton.titulo.Replace(" ", String.Empty) + ventanaP.nombre.Replace(" ", String.Empty) + ".getJButton().setBorder(BorderFactory.createEmptyBorder(10,10,10,10));");
+				WriteLine("		panel.add(b" + boton.titulo.Replace(" ", String.Empty) + ventanaP.nombre.Replace(" ", String.Empty) + ".getJButton());");
+				WriteLine("");
+			}else if (boton.EstadoFinal!=null){
+				WriteLine("		Boton b" + boton.titulo.Replace(" ", String.Empty) + ventanaP.nombre.Replace(" ", String.Empty) + @" = new Boton(""" + boton.titulo.Replace(" ", String.Empty) + @""", " + ventanaP.nombre.Replace(" ", String.Empty) + ");");
+				WriteLine("		b" + boton.titulo.Replace(" ", String.Empty) + ventanaP.nombre.Replace(" ", String.Empty) + ".getJButton().setBorder(BorderFactory.createEmptyBorder(10,10,10,10));");
+				WriteLine("		panel.add(b" + boton.titulo.Replace(" ", String.Empty) + ventanaP.nombre.Replace(" ", String.Empty) + ".getJButton());");	
+				WriteLine("");	
+			}	
+		}
+		WriteLine("		" + ventanaP.nombre.Replace(" ", String.Empty) + ".add(panel, BorderLayout.CENTER);");
+		WriteLine("		JMenuBar mb" + ventanaP.nombre.Replace(" ", String.Empty) + " = new JMenuBar();");
+		WriteLine("		mb" + ventanaP.nombre.Replace(" ", String.Empty) + ".setBorder(BorderFactory.createEmptyBorder(10,10,10,10));");
+		WriteLine("");
+		foreach(Menu menu in ventanaP.MenuPertenece){
+			WriteLine("		JMenu " + menu.nombre.Replace(" ", String.Empty) + @" = new JMenu(""" + menu.nombre.Replace(" ", String.Empty) + @""");");
+			WriteLine("");
+			foreach(ItemMenu item in menu.ItemPerteneceMenu){
+				if(item.Ventana!=null){
+					WriteLine("		ItemMenu i" + item.titulo.Replace(" ", String.Empty) + @" = new ItemMenu (""" + item.titulo.Replace(" ", String.Empty) + @""", " + ventanaP.nombre.Replace(" ", String.Empty) + ", " + item.Ventana.nombre.Replace(" ", String.Empty) + ");");
+					WriteLine("		i" + item.titulo.trim(' 0') + ".getJMenuItem().setBorder(BorderFactory.createEmptyBorder(2,2,2,2));");
+					WriteLine("		" + menu.nombre.Replace(" ", String.Empty) + ".add(i" + item.titulo.Replace(" ", String.Empty) + ".getJMenuItem());");	
+					WriteLine("");		
+				}else if(item.EstadoFinal!=null){
+					WriteLine("		ItemMenu i" + item.titulo.Replace(" ", String.Empty) + @" = new ItemMenu (""" + item.titulo.Replace(" ", String.Empty) + @""", " + ventanaP.nombre.Replace(" ", String.Empty) + ");");
+					WriteLine("		i" + item.titulo.Replace(" ", String.Empty) + ".getJMenuItem().setBorder(BorderFactory.createEmptyBorder(2,2,2,2));");
+					WriteLine("		" + menu.nombre.Replace(" ", String.Empty) + ".add(i" + item.titulo.Replace(" ", String.Empty) + ".getJMenuItem());");
+					WriteLine("");				
+				}				
+				WriteLine("");
+			}
+			WriteLine("		" + menu.nombre.Replace(" ", String.Empty) + ".setBorder(BorderFactory.createEmptyBorder(0,0,0,10));");
+			WriteLine("		mb" + ventanaP.nombre.Replace(" ", String.Empty) + ".add(" + menu.nombre.Replace(" ", String.Empty) + ");");
+			WriteLine("");
+		}
+		WriteLine("		" + ventanaP.nombre.Replace(" ", String.Empty) + ".add(mb" + ventanaP.nombre.Replace(" ", String.Empty) + ", BorderLayout.NORTH);");
+		WriteLine("");
+
+		WriteLine("		/*Habiendo insertado todos los menus, items, y botones de la ventana principal, ahora realizaremos lo mismo para las ventanas secundarias*/");
+		WriteLine("");
+		foreach(VentanaSecundaria ventanaS in this.TapizVentanas.VentanaSecundaria){
+			WriteLine("		JPanel p" + ventanaS.nombre.Replace(" ", String.Empty) + " = new JPanel();");
+			WriteLine("		p" + ventanaS.nombre.Replace(" ", String.Empty) +".setBorder(BorderFactory.createEmptyBorder());");
+			foreach(Boton boton in ventanaS.BotonPertenece){ botones++;}
+			int filas2 = botones/3 + 1;
+			if(filas2>3){
+				WriteLine("		p" + ventanaS.nombre.Replace(" ", String.Empty) + ".setPreferredSize(new Dimension("+ ventanaS.ancho +", "+(ventanaS.alto/3)*filas2+"));");
+			}
+			WriteLine("		p" + ventanaS.nombre.Replace(" ", String.Empty) + ".setLayout(new GridLayout(" + filas2 + ",3));");
+			WriteLine("");
+			foreach(Boton boton in ventanaS.BotonPertenece){
+				if(boton.Ventana!=null){
+					WriteLine("		Boton b" + boton.titulo.Replace(" ", String.Empty) + ventanaS.nombre.Replace(" ", String.Empty) + @" = new Boton(""" + boton.titulo.Replace(" ", String.Empty) + @""", " + ventanaS.nombre.Replace(" ", String.Empty) + ", " + boton.Ventana.nombre.Replace(" ", String.Empty) + ");");
+					WriteLine("		b" + boton.titulo.Replace(" ", String.Empty) + ventanaS.nombre.Replace(" ", String.Empty) + ".getJButton().setBorder(BorderFactory.createEmptyBorder(10,10,10,10));");
+					WriteLine("		p" + ventanaS.nombre.Replace(" ", String.Empty) +".add(b" + boton.titulo.Replace(" ", String.Empty) + ventanaS.nombre.Replace(" ", String.Empty) + ".getJButton());");
+					WriteLine("");
+				}else if (boton.EstadoFinal!=null){
+					WriteLine("		Boton b" + boton.titulo.Replace(" ", String.Empty) + ventanaS.nombre.Replace(" ", String.Empty) + @" = new Boton(""" + boton.titulo.Replace(" ", String.Empty) + @""", " + ventanaS.nombre.Replace(" ", String.Empty) + ");");
+					WriteLine("		b" + boton.titulo.Replace(" ", String.Empty) + ventanaS.nombre.Replace(" ", String.Empty) + ".getJButton().setBorder(BorderFactory.createEmptyBorder(10,10,10,10));");
+					WriteLine("		p" + ventanaS.nombre.Replace(" ", String.Empty) +".add(b" + boton.titulo.Replace(" ", String.Empty) + ventanaS.nombre.Replace(" ", String.Empty) + ".getJButton());");	
+					WriteLine("");	
+				}
+			}
+			WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".add(p" + ventanaS.nombre.Replace(" ", String.Empty) +", BorderLayout.CENTER);");
+			WriteLine("		JMenuBar mb" + ventanaS.nombre.Replace(" ", String.Empty) + " = new JMenuBar();");
+			WriteLine("		mb" + ventanaS.nombre.Replace(" ", String.Empty) + ".setBorder(BorderFactory.createEmptyBorder(10,10,10,10));");
+			WriteLine("");
+			foreach(Menu menu in ventanaS.MenuPertenece){
+				WriteLine("		JMenu " + menu.nombre.Replace(" ", String.Empty) + @" = new JMenu(""" + menu.nombre.Replace(" ", String.Empty) + @""");");
+				foreach(ItemMenu item in menu.ItemPerteneceMenu){
+					if(item.Ventana!=null){
+						WriteLine("		ItemMenu i" + item.titulo.Replace(" ", String.Empty) + @" = new ItemMenu (""" + item.titulo.Replace(" ", String.Empty) + @""", " + ventanaP.nombre.Replace(" ", String.Empty) + ", " + item.Ventana.nombre.Replace(" ", String.Empty) + ");");
+						WriteLine("		i"+item.titulo.Replace(" ", String.Empty) + ".getJMenuItem().setBorder(BorderFactory.createEmptyBorder(2,2,2,2));");
+						WriteLine("		"+menu.nombre.Replace(" ", String.Empty) + ".add(i" + item.titulo.Replace(" ", String.Empty) + ".getJMenuItem());");
+						WriteLine("");			
+					}else if(item.EstadoFinal!=null){
+						WriteLine("		ItemMenu i" + item.titulo.Replace(" ", String.Empty) + @" = new ItemMenu (""" + item.titulo.Replace(" ", String.Empty) + @""", " + ventanaP.nombre.Replace(" ", String.Empty) + ");");
+						WriteLine("		i"+item.titulo.Replace(" ", String.Empty) + ".getJMenuItem().setBorder(BorderFactory.createEmptyBorder(2,2,2,2));");
+						WriteLine("		"+menu.nombre.Replace(" ", String.Empty) + ".add(i" + item.titulo.Replace(" ", String.Empty) + ".getJMenuItem());");
+						WriteLine("");				
+					}
+				}
+				WriteLine("		"+menu.nombre.Replace(" ", String.Empty) + ".setBorder(BorderFactory.createEmptyBorder(0,0,0,10));");
+				WriteLine("		mb" + ventanaS.nombre.Replace(" ", String.Empty) + ".add(" + menu.nombre.Replace(" ", String.Empty) + ");");
+				WriteLine("");
+			}
+			WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".add(mb" + ventanaS.nombre.Replace(" ", String.Empty) + ", BorderLayout.NORTH);");
+			WriteLine("		" + ventanaS.nombre.Replace(" ", String.Empty) + ".pack();");
+			WriteLine("");
+		}
+		WriteLine("		" + ventanaP.nombre.Replace(" ", String.Empty) + ".pack();");
+		WriteLine("		" + ventanaP.nombre+".setVisible(true);");
+		WriteLine("	}");
+		WriteLine("");
+		WriteLine("}");
+		fileManager.Process();
+	}
+#>

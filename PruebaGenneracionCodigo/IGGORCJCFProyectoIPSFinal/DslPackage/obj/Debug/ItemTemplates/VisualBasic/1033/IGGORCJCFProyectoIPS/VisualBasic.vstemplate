@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{c8ff0d6d-af00-4ddc-9e31-b468af9607ac}</TemplateID>
+		<Name Package="{8491a999-3690-4260-ae75-43afeb1e1a3a}" ID="103"/>
+		<Description Package="{8491a999-3690-4260-ae75-43afeb1e1a3a}" ID="102"/>
+		<Icon Package="{8491a999-3690-4260-ae75-43afeb1e1a3a}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>IGGORCJCFProyectoIPS.IGGORCJCFProyectoIPS</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.IGGORCJCFProyectoIPS">IGGORCJCFProyectoIPS.IGGORCJCFProyectoIPS</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.IGGORCJCFProyectoIPS.diagram">IGGORCJCFProyectoIPS.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

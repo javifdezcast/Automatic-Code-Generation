@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="184a54cf-a55f-4569-aaa7-a49021e6d94e" xmlns="http://schemas.microsoft.com/dsltools/IGGORCJCFProyectoIPS">
+  <ventanaPrincipal>
+    <tapizVentanasHasVentanaPrincipal Id="4f20f483-9337-4f11-bd8e-7db0a456b27d">
+      <ventanaPrincipal Id="d323b9e7-a338-46b2-9ae1-d95c839af188" alto="0" ancho="0" />
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="68c77630-e54a-48df-a8c0-4a723777ebc0">
+      <ventanaSecundaria Id="2c8762a9-0839-473e-9bb0-73432425e517" alto="0" ancho="0" modal="false" />
+    </tapizVentanasHasVentanaSecundaria>
+  </ventanaSecundaria>
+</tapizVentanas>
